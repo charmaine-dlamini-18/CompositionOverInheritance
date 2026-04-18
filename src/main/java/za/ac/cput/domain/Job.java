@@ -46,6 +46,15 @@ public class Job {
         private String jobDescription;
         private String jobType;
 
+        public Job.Builder copy(Job job){
+            this.jobNumber = job.jobNumber;
+            this.jobTitle = job.jobTitle;
+            this.jobDescription = job.jobDescription;
+            this.jobType = job.jobType;
+            return this;
+        }
+
+
         public Builder setJobNumber(String jobNumber) {
             this.jobNumber = jobNumber;
             return this;

@@ -1,4 +1,4 @@
-
+/*
 package za.ac.cput;
 
 import za.ac.cput.domain.Address;
@@ -11,19 +11,20 @@ import za.ac.cput.factory.JobFactory;
 
 public class Main {
     public static void main(String[] args) {
-        Address x = AddressFactory.createAddress("14",
+        Address address = AddressFactory.createAddress("14",
                 "Station road",
                 "Cape Town",
                 "7462");
-        Job j = JobFactory.createJob("JB2345",
+        Job job = JobFactory.createJob("JB2345",
                 "Developer",
                 " Senior Backend developer",
                 "Full time");
         Employee emp = EmployeeFactory.createEmployee("12345",
                 "Charmaine",
                 "Dlamini",
-                "charmainedlamini@gmail.com",x,j);
+                "charmainedlamini@gmail.com",address,job);
 
         System.out.println(emp.toString());
     }
 }
+*/

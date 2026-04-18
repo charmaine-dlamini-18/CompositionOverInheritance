@@ -71,6 +71,17 @@ public class Employee {
         private Address address;
         private Job job;
 
+        public Employee.Builder copy(Employee employee){
+            this.employeeNumber = employee.employeeNumber;
+            this.firstName = employee.firstName;
+            this.lastName = employee.lastName;
+            this.email = employee.email;
+            this.address = employee.address;
+            this.job = employee.job;
+            return this;
+        }
+
+
         public Builder setEmployeeNumber(String employeeNumber){
             this.employeeNumber = employeeNumber;
             return this;
