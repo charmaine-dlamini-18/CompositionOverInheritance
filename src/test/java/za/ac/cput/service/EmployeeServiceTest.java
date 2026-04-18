@@ -1,6 +1,5 @@
-package za.ac.cput.repository;
+package za.ac.cput.service;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -14,35 +13,34 @@ import za.ac.cput.factory.JobFactory;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class EmployeeRepositoryTest {
-    private static IEmployeeRepository repository = EmployeeRepository.getRepository();
+class EmployeeServiceTest {
 
-    private Address x = AddressFactory.createAddress("14",
-            "Station road",
+    private IEmployeeService service = EmployeeService.getService();
+
+    private Address x = AddressFactory.createAddress("20",
+            "Adderley St",
             "Cape Town",
-            "7462");
+            "8100");
 
-    private Job j = JobFactory.createJob("JB2345",
+    private Job j = JobFactory.createJob("JB12345",
             "Developer",
             " Senior Backend developer",
             "Full time");
-
     private Employee employee = EmployeeFactory.createEmployee("12345",
-            "Charmaine",
-            "Dlamini",
-            "charmainedlamini@gmail.com",x,j);
-
+            "Chantelle",
+            "Hendricks",
+            "chantelle@gmail.com",x,j);
     @Test
     void a_create() {
-        Employee created = repository.create(employee);
+        Employee created = service.create(employee);
         assertNotNull(created);
         System.out.println(created);
     }
 
     @Test
     void b_read() {
-        Employee read = repository.read(employee.getEmployeeNumber());
-        assertNotNull(read);
+       Employee read = service.read(employee.getEmployeeNumber());
+       assertNotNull(read);
         System.out.println(read);
     }
 
@@ -50,23 +48,15 @@ class EmployeeRepositoryTest {
     void c_update() {
         Employee newEmployee = new Employee.Builder()
                 .copy(employee)
-                .setLastName("Chadson")
-                .setEmail("charmainechadson18@gmail.com")
+                .setLastName("Gibsons")
                 .build();
-        Employee updated = repository.update(newEmployee);
+        Employee updated = service.update(newEmployee);
         assertNotNull(updated);
         System.out.println(updated);
     }
 
     @Test
-    @Disabled
-    void d_delete() {
-        assertTrue(repository.delete(employee.getEmployeeNumber()));
-        System.out.println("Success: employee deleted");
-    }
-
-    @Test
-    void e_getAll() {
-        System.out.println(repository.getAll());
+    void d_getAll() {
+        System.out.println(service.getAll());
     }
 }
