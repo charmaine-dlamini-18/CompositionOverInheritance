@@ -32,22 +32,10 @@
             <version>1.10.0</version>
             <scope>compile</scope>
         </dependency>
-
-        <!-- Source: https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>6.0.2</version>
-            <scope>test</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-
-    <!-- Source: https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>6.0.2</version>
-        <scope>test</scope>
-    </dependency>
 
     </dependencies>
 </project>
