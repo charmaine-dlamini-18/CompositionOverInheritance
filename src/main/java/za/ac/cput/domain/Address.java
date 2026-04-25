@@ -7,7 +7,7 @@ public class Address {
     private String city;
     private String postalCode;
 
-    private Address(){
+    public Address(){
 
     }
     private Address(Builder builder) {

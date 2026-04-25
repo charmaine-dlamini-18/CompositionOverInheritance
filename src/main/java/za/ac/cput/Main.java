@@ -1,30 +1,12 @@
-/*
+
 package za.ac.cput;
 
-import za.ac.cput.domain.Address;
-import za.ac.cput.domain.Employee;
-import za.ac.cput.domain.Job;
-import za.ac.cput.factory.AddressFactory;
-import za.ac.cput.factory.EmployeeFactory;
-import za.ac.cput.factory.JobFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        Address address = AddressFactory.createAddress("14",
-                "Station road",
-                "Cape Town",
-                "7462");
-        Job job = JobFactory.createJob("JB2345",
-                "Developer",
-                " Senior Backend developer",
-                "Full time");
-        Employee emp = EmployeeFactory.createEmployee("12345",
-                "Charmaine",
-                "Dlamini",
-                "charmainedlamini@gmail.com",address,job);
-
-        System.out.println(emp.toString());
+      SpringApplication.run(Main.class, args);
     }
 }
-*/

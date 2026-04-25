@@ -51,7 +51,6 @@ class EmployeeRepositoryTest {
         Employee newEmployee = new Employee.Builder()
                 .copy(employee)
                 .setLastName("Chadson")
-                .setEmail("charmainechadson18@gmail.com")
                 .build();
         Employee updated = repository.update(newEmployee);
         assertNotNull(updated);

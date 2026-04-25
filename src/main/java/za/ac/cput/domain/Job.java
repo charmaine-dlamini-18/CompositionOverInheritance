@@ -8,7 +8,7 @@ public class Job {
     private String jobDescription;
     private String jobType;
 
-    private Job(){
+    public Job(){
 
     }
     private Job(Builder builder){
