@@ -17,10 +17,10 @@ public class EmployeeFactory {
         if(Helper.isNullOrEmpty(employeeNumber)
                 || Helper.isNullOrEmpty(firstName)
                 || Helper.isNullOrEmpty(lastName)
-                || Helper.isNull(address)
-                || Helper.isNull(job)
         ){
-
+            return null;
+        }
+        if (Helper.isNull(address)|| Helper.isNull(job)){
             return null;
         }
         if (!Helper.isValid(email)){
